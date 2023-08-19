@@ -1,0 +1,23 @@
+title Exercise N°0.4
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: Send HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: Send main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: Send main.js
+note over browser: browser starts executing js-code that requests JSON data from server 
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: [{content: "kkln", date: "2023-08-18T17:32:00.436Z"},...]
+note over browser: browser executes the event handler that renders notes to display
+note over browser: user enters and sends data
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server->browser: Send New_note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: Send HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: Send main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: Send main.js
+note over browser: browser starts executing js-code that requests JSON data from server 
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: [{content: "gfgdf", date: "2023-08-18T17:48:01.895Z"},...]
